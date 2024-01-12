@@ -8,7 +8,8 @@ pytorch>=1.8
 
 ## Code
 ### 2.1 Data
-We can use an adjacent tensor, shape = (T, N, N), to represent
+The synthetic data is a (6, 60, 60) tensor, it records the interactions between 60 nodes at 6 time snapshots.
+
 ### 2.2 Model
 The model is expressed as:
 ```math
@@ -27,7 +28,7 @@ b^{(t)}_{mn} = \mathbb{1}(x^{(t)}_{mn}\geqslant1)
 \end{array}
 ```
 
-$\xi$, $\beta$, $c_0$, $g_0$, $h_0$ and $\tau$ are hyperparameters, others are model parameters
+$\beta$, $c_0$, $g_0$, $h_0$ and $\tau$ are hyperparameters, others are model parameters
 
 $\phi^{(t)}_{nk}$ : a positive value, measuring how strongly node $n$ is affiliated with community $k$ at time $t$.
 
@@ -39,4 +40,5 @@ $\lambda_{kk'}$ : a positive value, measuring how strongly communities $k$ and $
 
 $b^{(t)}_{mn} = \mathbb{1}$ : there is interaction between node $m$ and node $n$ at time $t$
 
-## 
+### 2.3 Inference
+We present a gibbs sampling procedure to update hyperparameters and model parameters
