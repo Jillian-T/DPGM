@@ -20,7 +20,7 @@ The model is expressed as:
 \\
 r_k \sim {\rm Gam}(\gamma_0/K, 1/c_0)
 \\
-\lambda_{kk'} \sim \left\{ \begin{array}{ll} {\rm Gam}(\xi r_k, 1/\beta), & \textup{if } k=k' \\ Gam(r_k r_{k'}, 1/\beta), & \textup{otherwise} \end{array}\right.
+\lambda_{kk'} \sim \left\{ \begin{array}{ll} {\rm Gam}(\xi r_k, 1/\beta), & \textup{if } k=k' \\ {\rm Gam}(r_k r_{k'}, 1/\beta), & \textup{otherwise} \end{array}\right.
 \\
 x^{(t)}_{mn} \sim {\rm Po}(\displaystyle\sum_{k=1}^{K}\sum_{k'=1}^{K}\lambda_{kk'}\phi^{(t)}_{nk}\phi^{(t)}_{mk'})
 \\
